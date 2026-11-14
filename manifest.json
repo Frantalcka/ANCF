@@ -1,0 +1,10 @@
+{
+  "Name": "Asset Name Case Fixes",
+  "Author": "Frantalcka",
+  "Version": "0.1.0",
+  "Description": "Automatically resolves content asset names to the real capitalization of the files in the game's Content folder. Fixes mods which request assets like 'data/quests' on case-sensitive file systems (Linux/macOS).",
+  "UniqueID": "Frantalcka.AssetNameCaseFixes",
+  "EntryDll": "AssetNameCaseFixes.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": ["Nexus:55565"]
+}
