@@ -113,7 +113,3 @@ Available in the SMAPI console on case-sensitive file systems.
 | `Patches.cs` | Harmony prefix methods |
 | `manifest.json` | SMAPI mod manifest |
 | `AssetNameCaseFixes.csproj` | Build configuration |
-
-## Credits
-
-Frantalcka
