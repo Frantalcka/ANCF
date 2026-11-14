@@ -103,13 +103,3 @@ Available in the SMAPI console on case-sensitive file systems.
 | `casefix_toggle` | Enable or disable the fixes for the current session. |
 | `casefix_rescan` | Rebuild the file index after the `Content` folder changes. |
 | `casefix_stats` | Show how many names were checked and rewritten this session. |
-
-## Project structure
-
-| File | Purpose |
-| --- | --- |
-| `ModEntry.cs` | Mod entry point, patch registration, console commands |
-| `CaseMap.cs` | Case-insensitive index of `Content` asset names |
-| `Patches.cs` | Harmony prefix methods |
-| `manifest.json` | SMAPI mod manifest |
-| `AssetNameCaseFixes.csproj` | Build configuration |
