@@ -9,7 +9,11 @@
     <ImplicitUsings>disable</ImplicitUsings>
     <GamePath Condition="'$(GamePath)' == ''">$(STARDEW_VALLEY_PATH)</GamePath>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <OutputPath>AssetNameCaseFixes/</OutputPath>
+    <DefaultItemExcludes>$(DefaultItemExcludes);AssetNameCaseFixes/**</DefaultItemExcludes>
     <PlatformTarget>x64</PlatformTarget>
+    <DebugType>none</DebugType>
+    <GenerateDependencyFile>false</GenerateDependencyFile>
     <GenerateDocumentationFile>false</GenerateDocumentationFile>
   </PropertyGroup>
 
@@ -31,5 +35,13 @@
       <Private>false</Private>
     </Reference>
   </ItemGroup>
+
+  <ItemGroup>
+    <None Update="manifest.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <Target Name="CheckGamePath" BeforeTargets="ResolveAssemblyReferences" Condition="'$(GamePath)' == '' Or !Exists('$(GamePath)/StardewModdingAPI.dll')">
+    <Error Text="Game folder not found. Pass it with -p:GamePath=&quot;/path/to/Stardew Valley&quot; or set the STARDEW_VALLEY_PATH environment variable." />
+  </Target>
 
 </Project>
